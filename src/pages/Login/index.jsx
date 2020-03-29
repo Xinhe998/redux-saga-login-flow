@@ -51,7 +51,7 @@ function Login({
     form.validateFields((err, values) => {
       if (!err) {
         login({
-          email: values.username,
+          username: values.username,
           password: values.password,
         });
       }

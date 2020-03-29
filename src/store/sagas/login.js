@@ -4,7 +4,7 @@ import { api } from '../services';
 export function* loginFlow(action) {
   try {
     const response = yield call(api.login, {
-      m_account: action.payload.email,
+      m_account: action.payload.username,
       m_pasword: action.payload.password,
     });
     yield put({ type: 'LOGIN_SUCCESS', response });
